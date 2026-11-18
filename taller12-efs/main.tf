@@ -38,8 +38,9 @@ resource "aws_instance" "mi_instancia_efs" {
   instance_type = var.tipo_instancia
   key_name= var.nombre_llave
   security_groups = [ aws_security_group.mi-sg-efs.name ]
+    count = var.cantidad_instancias
   tags={
-    Name = "MiInstanciaTerraform2"
+    Name = "Mi instancia EFS -${count.index+1}"
   }
   vpc_security_group_ids =[aws_security_group.mi-sg-efs.id]
 }
