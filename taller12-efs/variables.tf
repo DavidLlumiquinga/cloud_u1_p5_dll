@@ -13,18 +13,18 @@ variable "ami_id" {
 
 variable "tipo_instancia" {
     description = "Tipo de instancia"
-    type = string
-    default = "t2.micro"
+  type = string
+   default = "t2.micro"
 }
 
 variable "nombre_llave" {
   description = "Nombre del par de llaves"
   type = string
-  default = "mi-primera-llaves-dll"
+ default = "mi-primera-llaves-dll"
 }
 
 variable "cantidad_instancias" {
   description = "cantidad de instancias"
   type = number
-  default = 1
+ default = 2
 }
